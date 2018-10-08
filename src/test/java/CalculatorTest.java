@@ -18,4 +18,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(0, calculator.add(input));
     }
+    
+    @Test
+    public void testOneString() {
+    	Calculator calculator = new Calculator();
+    	assertEquals(1, calculator.add("1"));
+    }
 }

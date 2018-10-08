@@ -5,6 +5,9 @@ package com.mitrais.tdd.kata;
  */
 public class Calculator {
     public int add(String input) {
-        return 0;
+    	if (!input.isEmpty())
+    		return 1;
+    	else
+    		return 0;
     }
 }
