@@ -63,5 +63,10 @@ public class CalculatorTest {
     	
     }
     
+    @Test
+    public void testDelimiter() {
+    	Calculator calc = new Calculator();
+    	assertEquals(3, calc.add("//;\n1;2"));
+    }
     
 }

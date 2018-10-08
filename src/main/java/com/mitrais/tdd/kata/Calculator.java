@@ -6,8 +6,8 @@ package com.mitrais.tdd.kata;
 public class Calculator {
 
     public int add(String input) {
-        if (!input.isEmpty()) {
-            String[] listS = input.split("[,\n]");
+        if (!input.isEmpty()) { 
+            String[] listS = input.split("[,\n]");            
             int rtn = 0;
             for(String s : listS) {
                 rtn += Integer.parseInt(s);
