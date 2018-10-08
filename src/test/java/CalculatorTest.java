@@ -30,4 +30,10 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         assertEquals(2, calc.add("2"));
     }
+    
+    @Test
+    public void testTwoNumbers() {
+        Calculator calc = new Calculator();
+        assertEquals(3, calc.add("1,2"));
+    }
 }
