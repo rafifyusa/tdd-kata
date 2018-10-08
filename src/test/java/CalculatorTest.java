@@ -48,4 +48,20 @@ public class CalculatorTest {
     	Calculator calc = new Calculator();
     	assertEquals(1700, calc.add("200,200,300,500,500"));
     }
+    
+    @Test
+    public void testNewLine () {
+    	Calculator calc = new Calculator();
+    	assertEquals(6, calc.add("1\n2,3"));
+    	
+    }
+    
+    @Test
+    public void testNewLine2 () {
+    	Calculator calc = new Calculator();
+    	assertEquals(6, calc.add("1,2\n3"));
+    	
+    }
+    
+    
 }
