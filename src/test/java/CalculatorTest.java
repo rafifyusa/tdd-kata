@@ -24,4 +24,10 @@ public class CalculatorTest {
     	Calculator calculator = new Calculator();
     	assertEquals(1, calculator.add("1"));
     }
+
+    @Test
+    public void testOneNumber2(){
+        Calculator calc = new Calculator();
+        assertEquals(2, calc.add("2"));
+    }
 }
