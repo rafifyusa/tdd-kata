@@ -36,4 +36,16 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         assertEquals(3, calc.add("1,2"));
     }
+    
+    @Test
+    public void testUnknownNumbers() {
+    	Calculator calc = new Calculator();
+    	assertEquals(4, calc.add("1,1,1,1"));
+    }
+    
+    @Test
+    public void testUnknownNumbers2() {
+    	Calculator calc = new Calculator();
+    	assertEquals(1700, calc.add("200,200,300,500,500"));
+    }
 }
