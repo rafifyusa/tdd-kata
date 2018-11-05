@@ -1,5 +1,7 @@
 package com.mitrais.tdd.kata;
 
+import java.util.Arrays;
+
 public class Sequence {
 	private int[] numbers;
 
@@ -13,8 +15,15 @@ public class Sequence {
 	}
 
 	public int getMinimumValue() {
-
-		return -2;
+		return Arrays.stream(numbers).min().getAsInt();
+		//
+//		int rtn = 999999999;
+//		for (int n : numbers) {
+//			if (n < rtn) {
+//				rtn = n;
+//			}
+//		}
+//		return rtn;
 	}
 	
 }

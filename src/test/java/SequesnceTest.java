@@ -27,5 +27,14 @@ public class SequesnceTest {
 		sequence.addElement(numbers);
 		assertEquals(-2, sequence.getMinimumValue());
 	}
+	
+	// minimum value of seq2
+	@Test
+	public void testMinimumValueOfSequenceTwo() {
+		Sequence sequence = new Sequence();
+		int[] numbers= {0, 128, -24, -2, 92, 11};
+		sequence.addElement(numbers);
+		assertEquals(-24, sequence.getMinimumValue());
+	}
 
 }
