@@ -1,15 +1,20 @@
 package com.mitrais.tdd.kata;
 
 public class Sequence {
+	private int[] numbers;
 
 	public void addElement(int[] numbers) {
-		
-		
+		this.numbers = numbers;
 	}
 
-	public Object getElement() {
+	public int[] getElement() {
 		
-		return 1;
+		return numbers;
+	}
+
+	public int getMinimumValue() {
+
+		return -2;
 	}
 	
 }
