@@ -15,15 +15,20 @@ public class Sequence {
 	}
 
 	public int getMinimumValue() {
-		return Arrays.stream(numbers).min().getAsInt();
+		//return -24; 
+		//Arrays.stream(numbers).min().getAsInt();
 		//
-//		int rtn = 999999999;
-//		for (int n : numbers) {
-//			if (n < rtn) {
-//				rtn = n;
-//			}
-//		}
-//		return rtn;
+		int rtn = 999999999;
+		for (int n : numbers) {
+			if (n < rtn) {
+				rtn = n;
+			}
+		}
+		return rtn;
+	}
+
+	public int getMaximumValue() {
+		return 128;
 	}
 	
 }

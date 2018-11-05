@@ -37,4 +37,11 @@ public class SequesnceTest {
 		assertEquals(-24, sequence.getMinimumValue());
 	}
 
+	@Test
+	public void testMaximumValueOfSequence() {
+		Sequence sequence = new Sequence();
+		int[] numbers= {0, 128, -24, -2, 92, 11};
+		sequence.addElement(numbers);
+		assertEquals(128, sequence.getMaximumValue());
+	}
 }
