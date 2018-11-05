@@ -2,9 +2,14 @@ package com.mitrais.tdd.kata;
 
 public class Sequence {
 
-	public void addElement(int i) {
-		// TODO Auto-generated method stub
+	public void addElement(int[] numbers) {
 		
+		
+	}
+
+	public Object getElement() {
+		
+		return 1;
 	}
 	
 }

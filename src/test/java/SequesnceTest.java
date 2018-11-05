@@ -12,8 +12,9 @@ public class SequesnceTest {
 		String input = "";
 
 		Sequence sequence = new Sequence();
-		sequence.addElement(1);
-		assertEquals(1, sequence.getElement()));
+		int[] numbers= {6, 9, 15, -2, 92, 11};
+		sequence.addElement(numbers);
+		assertEquals({6, 9, 15, -2, 92, 11},sequence.getElement());
 	}
 
 }
