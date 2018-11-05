@@ -3,6 +3,7 @@
 /target/
 !gradle/wrapper/gradle-wrapper.jar
 !.mvn/wrapper/maven-wrapper.jar
+/.metadata/
 
 ### STS ###
 .apt_generated
