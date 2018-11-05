@@ -15,20 +15,30 @@ public class Sequence {
 	}
 
 	public int getMinimumValue() {
-		//return -24; 
-		//Arrays.stream(numbers).min().getAsInt();
-		//
-		int rtn = 999999999;
-		for (int n : numbers) {
-			if (n < rtn) {
-				rtn = n;
-			}
-		}
-		return rtn;
+		
+		return Arrays.stream(numbers).min().getAsInt();
+		
+//		int rtn = 999999999;
+//		for (int n : numbers) {
+//			if (n < rtn) {
+//				rtn = n;
+//			}
+//		}
+//		return rtn;
 	}
 
 	public int getMaximumValue() {
-		return 128;
+		return Arrays.stream(numbers).max().getAsInt();
+	}
+
+	public int getNumberElement() {
+		// TODO Auto-generated method stub
+		return (int) Arrays.stream(numbers).count();
+	}
+
+	public double getAverageValue() {
+		// TODO Auto-generated method stub
+		return Arrays.stream(numbers).average().getAsDouble();
 	}
 	
 }

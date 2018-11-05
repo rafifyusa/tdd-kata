@@ -2,6 +2,7 @@ import com.mitrais.tdd.kata.Sequence;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Calendar;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -44,4 +45,23 @@ public class SequesnceTest {
 		sequence.addElement(numbers);
 		assertEquals(128, sequence.getMaximumValue());
 	}
+	
+	@Test
+	public void testNumberElementOfSequence() {
+		Sequence sequence = new Sequence();
+		int[] numbers= {0, 128, -24, -2, 92, 11};
+		sequence.addElement(numbers);
+		assertEquals(6, sequence.getNumberElement());
+	}
+	
+
+	@Test
+	public void testAverageValue() {
+		Sequence sequence = new Sequence();
+		int[] numbers= {0, 128, -24, -2, 92, 11};
+		double test = Arrays.stream(numbers).average().getAsDouble();
+		sequence.addElement(numbers);
+		assertEquals(test, sequence.getAverageValue(), 0.0);
+	}
+	
 }
