@@ -25,4 +25,18 @@ public class CalculatorTest {
 
 		Assert.assertEquals(1, c.add("1"));
 	}
+	
+	@Test
+	public void sumOfTwoNumbers() {
+		Calculator c = new Calculator();
+
+		Assert.assertEquals(3, c.add("1,2"));
+	}
+	
+	@Test
+	public void differentSumOfTwoNumbers() {
+		Calculator c = new Calculator();
+
+		Assert.assertEquals(7, c.add("3,4"));
+	}
 }
