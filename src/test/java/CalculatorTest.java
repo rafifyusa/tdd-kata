@@ -39,4 +39,18 @@ public class CalculatorTest {
 
 		Assert.assertEquals(7, c.add("3,4"));
 	}
+
+	@Test
+	public void unknownAmountOfNumbers() {
+		Calculator c = new Calculator();
+
+		Assert.assertEquals(19, c.add("3,4,5,7"));
+	}
+
+	@Test
+	public void newLineBetweenNumber() {
+		Calculator c = new Calculator();
+
+		Assert.assertEquals(6, c.add("1\n2,3"));
+	}
 }
