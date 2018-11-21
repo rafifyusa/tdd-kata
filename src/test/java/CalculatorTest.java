@@ -1,5 +1,6 @@
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 import com.mitrais.tdd.kata.Calculator;
 
@@ -14,6 +15,7 @@ public class CalculatorTest {
 	public void addNumber() {
 		Calculator calc = new Calculator();
 		
-		Assert.assertEquals("Zero Value",calc.setNum(""));
+		Assert.assertEquals(0,calc.add(""));
+		
 	}
 }
