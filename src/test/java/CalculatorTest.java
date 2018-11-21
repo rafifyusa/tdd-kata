@@ -16,6 +16,13 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		Assert.assertEquals(0,calc.add(""));
-		
+
+	}
+
+	@Test
+	public void whenPassOneReturnOne() {
+		Calculator c = new Calculator();
+
+		Assert.assertEquals(1, c.add("1"));
 	}
 }
