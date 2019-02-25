@@ -30,4 +30,9 @@ public class CalculatorTest {
     public void testTwoCase(){
         Assert.assertEquals(2,calculator.add("2"));
     }
+
+    @Test
+    public void testTwoNumbersCase(){
+        Assert.assertEquals(3,calculator.add("1,2"));
+    }
 }
