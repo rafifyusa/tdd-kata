@@ -1,6 +1,7 @@
 package com.mitrais.tdd.kata;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -8,15 +9,25 @@ import org.junit.Test;
  */
 public class CalculatorTest {
 
+    private Calculator calculator;
+
+    @Before
+    public void instiatiateCalculator(){
+        this.calculator = new Calculator();
+    }
+
     @Test
     public void testEmptyCase() {
-        Calculator calculator = new Calculator();
         Assert.assertEquals(0, calculator.add(""));
     }
     
     @Test
     public void testOneCase(){
-    	Calculator calculator = new Calculator();
     	Assert.assertEquals(1, calculator.add("1"));
+    }
+
+    @Test
+    public void testTwoCase(){
+        Assert.assertEquals(2,calculator.add("2"));
     }
 }
