@@ -22,4 +22,10 @@ public class CalculatorClass {
         Calculator calculator = new Calculator();
         Assert.assertEquals(1, calculator.add("1"));
     }
+    
+    @Test
+    public void testTwoNumber() {
+    	Calculator calculator = new Calculator();
+    	Assert.assertEquals(3, calculator.add("1,2"));
+    }
 }
