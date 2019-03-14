@@ -7,9 +7,12 @@ public class Calculator {
 
     public int add(String input) {
     	int ret = 0;
-        input = input.replace("\n", ",");
+
     	
-    	String[] a_input = input.split(",");
+    	input = input.replaceAll("//;","");
+    	input = input.replace("\n", ";");
+    	
+    	String[] a_input = input.split(",|;");
     	
     	for (String val: a_input) {
     		val = "".equals(val) ? "0" : val;
