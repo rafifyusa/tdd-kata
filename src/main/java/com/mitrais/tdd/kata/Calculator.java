@@ -5,14 +5,18 @@ package com.mitrais.tdd.kata;
  */
 public class Calculator {
 
-    public int add(String s) {
+    public int add(String input) {
+    	int ret = 0;
+        input = input.replace("\n", ",");
     	
-        if(!s.isEmpty()) {
-        	return Integer.parseInt(s);
-        }
+    	String[] a_input = input.split(",");
+    	
+    	for (String val: a_input) {
+    		val = "".equals(val) ? "0" : val;
+    		ret += Integer.parseInt(val);
+    	}
         
-        return 0;
-        
+        return ret;    
         
     }
 }
