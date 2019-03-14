@@ -46,5 +46,11 @@ public class CalculatorClass {
     	Calculator calculator = new Calculator();
     	Assert.assertEquals(3, calculator.add("//;\n1;2"));
     }
+    
+    @Test
+    public void testNewWeirdLine2() {
+    	Calculator calculator = new Calculator();
+    	Assert.assertEquals(3, calculator.add("//.\n1.2"));
+    }
   
 }
