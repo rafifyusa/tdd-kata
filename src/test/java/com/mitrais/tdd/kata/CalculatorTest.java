@@ -15,4 +15,10 @@ public class CalculatorTest {
 
         Assert.assertEquals(0, calculator.add(""));
     }
+
+    @Test
+    public void testOneNumberCase() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(1, calculator.add("1"));
+    }
 }
