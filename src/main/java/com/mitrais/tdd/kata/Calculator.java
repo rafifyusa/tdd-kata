@@ -11,6 +11,12 @@ public class Calculator {
             return 0;
         }
 
+        String [] resArr = s.split(",");
+        int result = 0;
+        for (int i = 0; i < resArr.length; i++){
+            result += resArr[i];
+        }
+
         return Integer.valueOf(s);
     }
 }
