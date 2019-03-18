@@ -6,17 +6,13 @@ package com.mitrais.tdd.kata;
 public class Calculator {
 
     public int add(String s) {
-
-//        if(s.isEmpty()) {
-//            return 0;
-//        }
-
-        String [] resArr = s.split(",");
         int result = 0;
-        for (int i = 0; i < resArr.length; i++){
-            result += Integer.valueOf(resArr[i]);
+        if (!s.isEmpty()) {
+            String[] resArr = s.split(",");
+            for (int i = 0; i < resArr.length; i++) {
+                result += Integer.valueOf(resArr[i]);
+            }
         }
-
         return result;
     }
 }

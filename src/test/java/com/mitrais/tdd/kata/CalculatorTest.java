@@ -12,7 +12,6 @@ public class CalculatorTest {
     @Test
     public void testEmptyCase() {
         Calculator calculator = new Calculator();
-
         Assert.assertEquals(0, calculator.add(""));
     }
 
@@ -26,5 +25,11 @@ public class CalculatorTest {
     public void testTwoNumber(){
         Calculator calculator = new Calculator();
         Assert.assertEquals(3, calculator.add("1,2"));
+    }
+
+    @Test
+    public void testAddFiveNumber(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(15, calculator.add("1,2,3,4,5"));
     }
 }
