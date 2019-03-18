@@ -32,4 +32,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         Assert.assertEquals(15, calculator.add("1,2,3,4,5"));
     }
+
+    @Test
+    public void testAddNewLineNumber(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(15, calculator.add("1\n2\n3\n4\n5"));
+    }
 }
