@@ -6,8 +6,19 @@ package com.mitrais.tdd.kata;
 public class Calculator {
 
     public int add(String input) {
+        int ret = 0;
+        String defaultDelimiter = ",";
         if("".equals(input)) return 0;
 
-        return 1;
+        if (input.contains(defaultDelimiter)) {
+            String[] numbers = input.split(defaultDelimiter);
+            for (String num : numbers) {
+                ret += Integer.parseInt(num);
+            }
+        }
+        else {
+            ret = Integer.parseInt(input);
+        }
+        return ret;
     }
 }
