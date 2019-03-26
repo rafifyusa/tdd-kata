@@ -21,4 +21,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         Assert.assertEquals(1, calculator.add("1"));
     }
+
+    @Test
+    public void testAddNumberCase(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(2,calculator.add("2"));
+    }
 }
