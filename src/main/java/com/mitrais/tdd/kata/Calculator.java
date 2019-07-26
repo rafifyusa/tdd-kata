@@ -7,6 +7,6 @@ public class Calculator {
 
     public int add(String s) {
         if("".equalsIgnoreCase(s)) return 0;
-        return 1;
+        return Integer.valueOf(s);
     }
 }

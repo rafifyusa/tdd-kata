@@ -25,4 +25,5 @@ public class TestKata {
         Calculator calculator = new Calculator();
         Assert.assertEquals(2, calculator.add("2"));
     }
+
 }
