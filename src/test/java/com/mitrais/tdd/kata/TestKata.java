@@ -25,5 +25,11 @@ public class TestKata {
         Calculator calculator = new Calculator();
         Assert.assertEquals(2, calculator.add("2"));
     }
+    
+    @Test
+    public void test4() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(3, calculator.add("1,2"));
+    }
 
 }
