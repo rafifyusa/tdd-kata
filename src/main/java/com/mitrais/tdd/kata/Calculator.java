@@ -6,15 +6,15 @@ package com.mitrais.tdd.kata;
 public class Calculator {
 
     public int add(String s) {
-        if("".equalsIgnoreCase(s)) {
-        	return 0;
-        }else {
-        	String[] numberList = s.split(",");
-        	int total =0;
-        	for (int i = 0; i < numberList.length; i++) {
-				total += Integer.valueOf(numberList[i]);
-			}
-        	return total;
+        if ("".equalsIgnoreCase(s)) {
+            return 0;
+        } else {
+            String[] numberList = s.split("\n|,");
+            int total = 0;
+            for (int i = 0; i < numberList.length; i++) {
+                total += Integer.valueOf(numberList[i]);
+            }
+            return total;
         }
     }
 }
