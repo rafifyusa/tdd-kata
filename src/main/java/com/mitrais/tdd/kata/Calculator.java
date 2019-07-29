@@ -5,7 +5,15 @@ package com.mitrais.tdd.kata;
  */
 public class Calculator {
     public Integer add(String s) {
-        if("".equalsIgnoreCase(s)) return 0;
-        return 1;
+        int result=0;
+        if("".equalsIgnoreCase(s)) {
+            return result;
+        }else if(s.matches(",")){
+            String res[] = s.split(",");
+            result = Integer.parseInt(res[0]) + Integer.parseInt(res[1]);
+        }else {
+                result = Integer.parseInt(s);
+        }
+        return result;
     }
 }

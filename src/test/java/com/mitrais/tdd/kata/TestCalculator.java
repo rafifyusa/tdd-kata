@@ -25,4 +25,16 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(Integer.valueOf(2), calculator.add("2"));
     }
+
+    @Test
+    public void testOneNumberFive() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(Integer.valueOf(5), calculator.add("5"));
+    }
+
+    @Test
+    public void testOneNumberTwoNumbers() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(Integer.valueOf(3), calculator.add("1,2"));
+    }
 }
