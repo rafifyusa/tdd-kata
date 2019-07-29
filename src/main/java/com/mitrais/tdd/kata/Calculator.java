@@ -10,7 +10,9 @@ public class Calculator {
             return result;
         }else if(s.contains(",")){
             String res[] = s.split(",");
-            result = Integer.parseInt(res[0]) + Integer.parseInt(res[1]);
+            for(int i=0; i<res.length; i++){
+                result += Integer.parseInt(res[i]);
+            }
         }else {
                 result = Integer.parseInt(s);
         }

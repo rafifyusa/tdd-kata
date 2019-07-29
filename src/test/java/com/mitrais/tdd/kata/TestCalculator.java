@@ -37,4 +37,10 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(Integer.valueOf(3), calculator.add("1,2"));
     }
+
+    @Test
+    public void testOneNumberThreeNumbers() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(Integer.valueOf(6), calculator.add("1,2,3"));
+    }
 }
