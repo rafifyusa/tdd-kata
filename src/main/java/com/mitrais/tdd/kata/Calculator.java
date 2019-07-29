@@ -8,7 +8,7 @@ public class Calculator {
         int result=0;
         if("".equalsIgnoreCase(s)) {
             return result;
-        }else if(s.matches(",")){
+        }else if(s.contains(",")){
             String res[] = s.split(",");
             result = Integer.parseInt(res[0]) + Integer.parseInt(res[1]);
         }else {
