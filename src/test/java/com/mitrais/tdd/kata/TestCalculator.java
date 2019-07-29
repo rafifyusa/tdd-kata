@@ -43,4 +43,10 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(Integer.valueOf(6), calculator.add("1,2,3"));
     }
+
+    @Test
+    public void testOneNumberThreeNumbersNewLine() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(Integer.valueOf(6), calculator.add("1\n2,3"));
+    }
 }
