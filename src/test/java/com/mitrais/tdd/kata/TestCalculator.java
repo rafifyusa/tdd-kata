@@ -25,4 +25,11 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(2, calculator.add("2"));
     }
+
+    @Test
+    public void testOneComaTwo()
+    {
+        Calculator calculator= new Calculator();
+        Assert.assertEquals(3, calculator.add("1,2"));
+    }
 }
