@@ -8,9 +8,11 @@ public class Calculator {
         if ("".equalsIgnoreCase(s)) {
             return 0;
         }
-        String[] tokens = s.split(",");
-        int integer1 = Integer.parseInt(tokens[0]);
-        int integer2 = Integer.parseInt(tokens[1]);
-        return integer1 + integer2;
+        String[] tokens = s.split("\\n?,");
+        int sum = 0;
+        for (String token : tokens) {
+            sum += Integer.parseInt(token);
+        }
+        return sum;
     }
 }
