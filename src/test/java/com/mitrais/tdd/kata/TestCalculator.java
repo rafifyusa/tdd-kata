@@ -49,4 +49,10 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(100, calculator.add("25,10,15,5,45"));
     }
+
+    @Test
+    public void testSpaceBetweenNumbers(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(19, calculator.add("8 11"));
+    }
 }

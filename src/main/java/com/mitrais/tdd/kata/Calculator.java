@@ -15,6 +15,13 @@ public class Calculator {
                 result += Integer.parseInt(number);
             return result;
         }
+        if (s.contains(" ")) {
+            String[] numbers = s.split(" ");
+            int result = 0;
+            for (String number : numbers)
+                result += Integer.parseInt(number);
+            return result;
+        }
         return Integer.parseInt(s);
     }
 }
