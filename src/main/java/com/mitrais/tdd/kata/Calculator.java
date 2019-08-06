@@ -5,12 +5,15 @@ package com.mitrais.tdd.kata;
  */
 public class Calculator {
     public int add(String s) {
-        if("".equals(s)) {
+        if ("".equals(s)) {
             return 0;
         }
-        if(s.contains(",")) {
+        if (s.contains(",")) {
             String[] numbers = s.split(",");
-            return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+            int result = 0;
+            for (String number : numbers)
+                result += Integer.parseInt(number);
+            return result;
         }
         return Integer.parseInt(s);
     }

@@ -37,4 +37,16 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(10, calculator.add("10"));
     }
+
+    @Test
+    public void testThreeNumbers(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(10, calculator.add("1,4,5"));
+    }
+
+    @Test
+    public void testFiveNumbers(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(100, calculator.add("25,10,15,5,45"));
+    }
 }
