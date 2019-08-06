@@ -31,4 +31,10 @@ public class TestCalculator {
         Calculator calculator = new Calculator();
         Assert.assertEquals(3, calculator.add("1,2"));
     }
+
+    @Test
+    public void testNumberTen() {
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(10, calculator.add("10"));
+    }
 }

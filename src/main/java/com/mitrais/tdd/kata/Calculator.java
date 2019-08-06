@@ -8,6 +8,10 @@ public class Calculator {
         if("".equals(s)) {
             return 0;
         }
+        if(s.contains(",")) {
+            String[] numbers = s.split(",");
+            return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+        }
         return Integer.parseInt(s);
     }
 }
