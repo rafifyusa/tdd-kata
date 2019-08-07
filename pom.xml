@@ -13,8 +13,6 @@
         <surefire.version>2.22.2</surefire.version>
         <sonar.sources>src/main</sonar.sources>
         <sonar.tests>src/test</sonar.tests>
-        <!-- Below property indicates the pattern of the test suite -->
-        <runSuite>**/*Suite.class</runSuite>
         <!-- Sonar-JaCoCo properties -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
@@ -36,9 +34,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <includes>
-                        <include>${runSuite}</include>
-                    </includes>
                 </configuration>
             </plugin>
 
