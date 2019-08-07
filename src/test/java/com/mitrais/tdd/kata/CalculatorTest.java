@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by jchacana on 3/26/19.
  */
-public class TestCalculator {
+public class CalculatorTest {
 
     @Test
     public void testEmptyString() {

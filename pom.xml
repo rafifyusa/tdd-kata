@@ -10,13 +10,14 @@
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <surefire.version>2.22.2</surefire.version>
         <sonar.sources>src/main</sonar.sources>
         <sonar.tests>src/test</sonar.tests>
         <!-- Sonar-JaCoCo properties -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.jacoco.reportPaths>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPaths>
+<!--        <sonar.jacoco.reportPaths>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPaths>-->
         <sonar.language>java</sonar.language>
     </properties>
     <dependencies>
@@ -42,13 +43,13 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.9</version>
-                <configuration>
+<!--                <configuration>
                     <destFile>${sonar.jacoco.reportPaths}</destFile>
                     <append>true</append>
-                </configuration>
+                </configuration>-->
                 <executions>
                     <execution>
-                        <id>agent</id>
+                        <id>default-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -58,12 +59,6 @@
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-check</id>
-                        <goals>
-                            <goal>check</goal>
                         </goals>
                     </execution>
                 </executions>
