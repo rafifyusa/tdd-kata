@@ -47,7 +47,7 @@ public class CalculatorTest {
     @Test
     public void testFiveNumbers(){
         Calculator calculator = new Calculator();
-        Assert.assertEquals(1001, calculator.add("25,10,15,5,45"));
+        Assert.assertEquals(100, calculator.add("25,10,15,5,45"));
     }
 
     @Test
