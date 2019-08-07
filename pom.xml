@@ -10,6 +10,7 @@
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <surefire.version>2.22.2</surefire.version>
         <sonar.sources>src/main</sonar.sources>
         <sonar.tests>src/test</sonar.tests>
         <!-- Below property indicates the pattern of the test suite -->
@@ -17,7 +18,7 @@
         <!-- Sonar-JaCoCo properties -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+        <sonar.jacoco.reportPaths>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPaths>
         <sonar.language>java</sonar.language>
     </properties>
     <dependencies>
@@ -60,11 +61,11 @@
                 </executions>
             </plugin>
 
-            <plugin>
+<!--            <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.6.0.1398</version>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 </project>
