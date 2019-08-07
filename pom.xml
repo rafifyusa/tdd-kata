@@ -16,7 +16,7 @@
         <sonar.tests>src/test</sonar.tests>
         <!-- Sonar-JaCoCo properties -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+        <jacoco.version>0.7.9</jacoco.version>
 <!--        <sonar.jacoco.reportPaths>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPaths>-->
         <sonar.language>java</sonar.language>
     </properties>
@@ -34,15 +34,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                </configuration>
+                <version>${surefire.version}</version>
             </plugin>
 
             <!-- Sonar-JaCoCo integration plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
+                <version>${jacoco.version}</version>
 <!--                <configuration>
                     <destFile>${sonar.jacoco.reportPaths}</destFile>
                     <append>true</append>
@@ -54,13 +53,13 @@
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-                    <execution>
+<!--                    <execution>
                         <id>default-report</id>
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
-                    </execution>
+                    </execution>-->
                 </executions>
             </plugin>
 
